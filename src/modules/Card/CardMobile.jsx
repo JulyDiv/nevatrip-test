@@ -5,27 +5,27 @@ import { CardButtonShowMore } from "../../components/CardButtonShowMore";
 import { CardListItem } from "../../components/CardListItem";
 import { ImageCard } from "../../components/ImageCard";
 
-export const Card = ({ item }) => {
-  const [showMoreBtn, setShowMoreBtn] = useState(false);
-  const onClick = () => {
-    setShowMoreBtn(true);
-  };
-  const tripTimes = item.timeData.map((item) => (
-    <span key={item.id} className="card-time__list">
-      {item.timeTravel}
-    </span>
-  ));
+export const CardMobile = ({ item }) => {
+    const [showMoreBtn, setShowMoreBtn] = useState(false);
+    const onClick = () => {
+      setShowMoreBtn(true);
+    };
+    const tripTimes = item.timeData.map((item) => (
+      <span key={item.id} className="card-time__list">
+        {item.timeTravel}
+      </span>
+    ));
   return (
     <>
       <div key={item.id} className="card">
         {item.label
-          ? item.label === "Новинка" && (
-              <div className="card-label card-label--blue">{item.label}</div>
+          ? item.price === 900 && (
+              <div className="card-label card-label--yellow">{item.label}</div>
             )
           : ""}
         {item.label
-          ? item.label === "Круглый год" && (
-              <div className="card-label card-label--yellow">{item.label}</div>
+          ? item.price === 2900 && (
+              <div className="card-label card-label--purple">{item.label}</div>
             )
           : ""}
         <ImageCard img={item.img} />

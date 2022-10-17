@@ -356,20 +356,20 @@ ul {
   margin: 0 auto;
 }
 
-.mobile-card {
+.mobile {
   display: none;
 }
 
 .card {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
+  width: 100%;
+  margin-bottom: 60px;
   border: 0.3px solid #828282;
   border-radius: 16px;
-  width: 1100px;
   overflow: hidden;
-  margin-bottom: 60px;
 }
 
 .card:first-child {
@@ -377,8 +377,8 @@ ul {
 }
 
 .card-image {
-  width: 473px;
   margin-right: 22px;
+  width: 473px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -391,27 +391,23 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 16px;
-  padding-left: 23px;
-  padding-bottom: 26px;
+  padding: 16px 0 26px 23px;
 }
 
 .card-title__title {
+  margin-bottom: 14px;
   font-weight: 400;
   font-size: 26px;
   line-height: 34px;
-  color: #000000;
-  margin-bottom: 14px;
 }
 
 .card__time {
+  position: relative;
   display: block;
+  margin: 0 0 10px 22px;
   font-size: 14px;
   line-height: 20px;
   color: #9E9E9E;
-  position: relative;
-  margin-left: 22px;
-  margin-bottom: 10px;
 }
 
 .card__time::before {
@@ -420,9 +416,9 @@ ul {
   width: 16px;
   height: 16px;
   top: 48%;
+  left: -22px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  left: -22px;
   background-image: url(../../public/img/clock.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -433,9 +429,8 @@ ul {
 }
 
 .card-list__item {
-  margin-left: 30px;
   position: relative;
-  margin-bottom: 11px;
+  margin: 0 0 11px 30px;
   font-size: 18px;
   line-height: 20px;
   color: #343434;
@@ -467,11 +462,11 @@ ul {
 }
 
 .card-info__button {
+  padding: 16px 42px;
   border: none;
   font-size: 18px;
   line-height: 20px;
   color: #292929;
-  padding: 16px 42px;
   background: #FFD83C;
   border-radius: 23px;
 }
@@ -485,7 +480,6 @@ ul {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-right: 10px;
-  color: #000000;
 }
 
 .card-info__price-price {
@@ -494,15 +488,15 @@ ul {
 }
 
 .card-info__price-pier {
+  margin-top: 10px;
   font-size: 14px;
   line-height: 20px;
-  margin-top: 10px;
 }
 
 .card-label {
   position: absolute;
-  text-transform: uppercase;
   padding: 13px 35px;
+  text-transform: uppercase;
   font-weight: 600;
   height: 42px;
 }
@@ -515,10 +509,10 @@ ul {
 }
 
 .card-label--purple {
+  padding: 12px 27px;
   background: #7553FF;
   border-radius: 15px 0px 12px;
   color: #fff;
-  padding: 12px 27px;
 }
 
 .card-label--blue {
@@ -534,29 +528,26 @@ ul {
   display: inline-flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-left: 30px;
 }
 
-.card-time__list, .card-time .show-more {
+.card-time__list, .card-time__list-button {
+  margin: 0 6px 6px 0;
+  padding: 4px 16px;
   background: #C5DCFF;
   border-radius: 11px;
   font-size: 16px;
   line-height: 20px;
   color: #343434;
-  padding: 4px 16px;
-  margin-right: 6px;
   border: none;
+  cursor: pointer;
 }
 
-.card-time__list:nth-child(n+5), .card-time .show-more:nth-child(n+5) {
-  display: none;
-}
-
-.card-time__list:hover, .card-time .show-more:hover {
+.card-time__list:hover, .card-time__list-button:hover {
   background: #6BA6FF;
   -webkit-box-shadow: 0px 2px 4px rgba(126, 104, 104, 0.25);
           box-shadow: 0px 2px 4px rgba(126, 104, 104, 0.25);
   color: #fff;
-  cursor: pointer;
 }
 
 @media (max-width: 480px) {
@@ -585,17 +576,30 @@ ul {
     margin-right: 0;
     margin-bottom: 14px;
   }
+  .card-label {
+    padding: 12px 18px;
+  }
+  .card-label-yellow {
+    height: 35px;
+  }
+  .card-label-purple {
+    padding: 12px 27px;
+  }
   .card-info {
     padding: 0 12px;
     padding-bottom: 20px;
   }
   .card-title {
+    padding: 0 12px;
+    padding-bottom: 20px;
+  }
+  .card-title__title {
     font-weight: 600;
     font-size: 14px;
     line-height: 22px;
     color: #404040;
   }
-  .card .time {
+  .card__time {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
@@ -603,52 +607,47 @@ ul {
   .card-list {
     margin-bottom: 35px;
   }
-  .card-list-item {
+  .card-list__item {
     margin-left: 36px;
     position: relative;
     font-size: 14px;
     line-height: 20px;
     color: #4B4B4B;
   }
-  .card-list-item::last-child {
+  .card-list__item::last-child {
     display: block;
   }
-  .card-list-item::before {
+  .card-list__item::before {
     left: -36px;
     top: 4px;
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-  .card .info-price {
-    margin-right: auto;
-  }
-  .card .info-price .price-pier {
-    font-size: 10px;
-    line-height: 20px;
-  }
-  .card .label {
-    padding: 9px 18px;
-  }
-  .card .label-yellow {
-    height: 35px;
-  }
-  .card .label-purple {
-    padding: 12px 27px;
-  }
-  .card .time-list {
+  .card-time {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    list-style: none;
-    margin-left: -36px;
+    margin-left: 36px;
     margin-top: 7px;
   }
-  .card .time-list-record, .card .time-list .show-more {
+  .card-time__list, .card-time__list-button {
     padding: 4px 13px;
     font-size: 14px;
     background: #D9E8FF;
   }
-  .card .details {
+  .card-info__price {
+    margin-right: auto;
+  }
+  .card-info__price-price {
+    font-size: 30px;
+    line-height: 20px;
+  }
+  .card-info__price-pier {
+    margin-top: 0px;
+    font-size: 10px;
+    line-height: 20px;
+  }
+  .card-info__button {
     border: 0.5px solid #CBA500;
     border-radius: 20px;
     font-size: 14px;

@@ -1,5 +1,4 @@
 {
-  "extends": "next/core-web-vitals",
-  "plugins": ["babel-plugin-styled-components"]
+  "extends": "next/core-web-vitals"
 }
 

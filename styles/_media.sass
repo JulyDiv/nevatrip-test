@@ -15,19 +15,28 @@
       width: 100%
       margin-right: 0
       margin-bottom: 14px
+    &-label
+      padding: 12px 18px
+      &-yellow
+        height: 35px
+      &-purple
+        padding: 12px 27px
     &-info
       padding: 0 12px
       padding-bottom: 20px
     &-title
-      font-weight: 600
-      font-size: 14px
-      line-height: 22px
-      color: #404040
-    .time
+      padding: 0 12px
+      padding-bottom: 20px
+      &__title
+        font-weight: 600
+        font-size: 14px
+        line-height: 22px
+        color: #404040
+    &__time
       order: -1
     &-list
       margin-bottom: 35px
-      &-item
+      &__item
         margin-left: 36px
         position: relative
         font-size: 14px
@@ -39,32 +48,27 @@
           left: -36px
           top: 4px
           transform: translateY(0)
-    .info
-      &-price
-        margin-right: auto
-        .price
-          &-pier
-            font-size: 10px
-            line-height: 20px
-
-    .label
-      padding: 9px 18px
-      &-yellow
-        height: 35px
-      &-purple
-        padding: 12px 27px
-    .time-list
+    &-time
       display: flex
-      list-style: none
-      margin-left: -36px
+      margin-left: 36px
       margin-top: 7px
-      &-record, .show-more
+      &__list, &__list-button
         padding: 4px 13px
         font-size: 14px
         background: #D9E8FF
-    .details
-      border: 0.5px solid #CBA500
-      border-radius: 20px
-      font-size: 14px
-      line-height: 20px
-      color: #404040
+    &-info
+      &__price
+        margin-right: auto
+        &-price
+          font-size: 30px
+          line-height: 20px
+        &-pier
+          margin-top: 0px
+          font-size: 10px
+          line-height: 20px
+      &__button
+        border: 0.5px solid #CBA500
+        border-radius: 20px
+        font-size: 14px
+        line-height: 20px
+        color: #404040
