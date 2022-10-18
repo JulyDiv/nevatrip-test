@@ -1,3 +1,21 @@
+#### Nevatrip-test
+#### Тестовое задание в компанию Nevatrip
+
+![nt-test](https://user-images.githubusercontent.com/99066910/196438458-9aeeada4-8c96-49ff-a036-8adafa21f285.PNG)
+
+![nt-test-mobile](https://user-images.githubusercontent.com/99066910/196438491-d6e459d1-7803-4b58-8ef6-8d9ba7acc8e0.PNG)
+
+#### Cтек технологий:
+
+:star2: React <br>
+:star2: FC - работала на функциональных компонентах <br>
+:star2: Sass - стилизовала компоненты <br>
+:star2: Hooks - useState, useEffect, useCallback, useMemo, useRouter <br>
+
+##### Связаться со мной: 
+##### [https://t.me/julia_gerber] - Telegram
+##### [https://vk.com/id526712821] - VK
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
