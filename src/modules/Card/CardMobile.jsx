@@ -11,7 +11,7 @@ export const CardMobile = ({ item }) => {
       setShowMoreBtn(true);
     };
     const tripTimes = item.timeData.map((item) => (
-      <span key={item.id} className="card-time__list">
+      <span key={item.id} className="card-list__time-item">
         {item.timeTravel}
       </span>
     ));
@@ -29,14 +29,14 @@ export const CardMobile = ({ item }) => {
             )
           : ""}
         <ImageCard img={item.img} />
-        <div className="card-title">
-          <h1 className="card-title__title">{item.title}</h1>
+        <div className="card-wrapper">
+          <h1 className="card__title">{item.title}</h1>
 
           <span className="card__time">{item.time}</span>
 
           <ul className="card-list">
             <CardListItem description={item.description} />
-            <div className="card-time">
+            <div className="card-list__time">
               {tripTimes.length <= 4 ? (
                 tripTimes
               ) : (

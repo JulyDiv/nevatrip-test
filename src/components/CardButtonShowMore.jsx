@@ -4,8 +4,7 @@ export const CardButtonShowMore = ({ text, onClick }) => {
   return (
     <button
       onClick={() => onClick()}
-      className="card-time__list-button"
-    //   className={style ? "time-btn" : "hidden"}
+      className="card-list__time-button"
     >
       {text}
     </button>

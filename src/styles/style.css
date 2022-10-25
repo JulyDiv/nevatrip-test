@@ -383,7 +383,36 @@ ul {
       flex-shrink: 0;
 }
 
-.card-title {
+.card-label {
+  position: absolute;
+  padding: 13px 35px;
+  text-transform: uppercase;
+  font-weight: 600;
+  height: 42px;
+}
+
+.card-label--yellow {
+  top: 40px;
+  left: 0;
+  background: #FED74B;
+  color: #3E3E3E;
+}
+
+.card-label--purple {
+  padding: 12px 27px;
+  background: #7553FF;
+  border-radius: 15px 0px 12px;
+  color: #fff;
+}
+
+.card-label--blue {
+  top: 40px;
+  left: 0;
+  background: #099CE8;
+  color: #fff;
+}
+
+.card-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,7 +423,7 @@ ul {
   padding: 16px 0 26px 23px;
 }
 
-.card-title__title {
+.card__title {
   margin-bottom: 14px;
   font-weight: 400;
   font-size: 26px;
@@ -452,6 +481,34 @@ ul {
   background-image: url(../../public/img/check-mark.svg);
 }
 
+.card-list__time {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 30px;
+}
+
+.card-list__time-item, .card-list__time-button {
+  margin: 0 6px 6px 0;
+  padding: 4px 16px;
+  background: #C5DCFF;
+  border-radius: 11px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #343434;
+  border: none;
+  cursor: pointer;
+}
+
+.card-list__time-item:hover, .card-list__time-button:hover {
+  background: #6BA6FF;
+  -webkit-box-shadow: 0px 2px 4px rgba(126, 104, 104, 0.25);
+          box-shadow: 0px 2px 4px rgba(126, 104, 104, 0.25);
+  color: #fff;
+}
+
 .card-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -493,63 +550,6 @@ ul {
   line-height: 20px;
 }
 
-.card-label {
-  position: absolute;
-  padding: 13px 35px;
-  text-transform: uppercase;
-  font-weight: 600;
-  height: 42px;
-}
-
-.card-label--yellow {
-  top: 40px;
-  left: 0;
-  background: #FED74B;
-  color: #3E3E3E;
-}
-
-.card-label--purple {
-  padding: 12px 27px;
-  background: #7553FF;
-  border-radius: 15px 0px 12px;
-  color: #fff;
-}
-
-.card-label--blue {
-  top: 40px;
-  left: 0;
-  background: #099CE8;
-  color: #fff;
-}
-
-.card-time {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: 30px;
-}
-
-.card-time__list, .card-time__list-button {
-  margin: 0 6px 6px 0;
-  padding: 4px 16px;
-  background: #C5DCFF;
-  border-radius: 11px;
-  font-size: 16px;
-  line-height: 20px;
-  color: #343434;
-  border: none;
-  cursor: pointer;
-}
-
-.card-time__list:hover, .card-time__list-button:hover {
-  background: #6BA6FF;
-  -webkit-box-shadow: 0px 2px 4px rgba(126, 104, 104, 0.25);
-          box-shadow: 0px 2px 4px rgba(126, 104, 104, 0.25);
-  color: #fff;
-}
-
 @media (max-width: 480px) {
   .desktop {
     display: none;
@@ -585,15 +585,11 @@ ul {
   .card-label-purple {
     padding: 12px 27px;
   }
-  .card-info {
+  .card-wrapper {
     padding: 0 12px;
     padding-bottom: 20px;
   }
-  .card-title {
-    padding: 0 12px;
-    padding-bottom: 20px;
-  }
-  .card-title__title {
+  .card__title {
     font-weight: 600;
     font-size: 14px;
     line-height: 22px;
@@ -623,17 +619,21 @@ ul {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-  .card-time {
+  .card-list__time {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-left: 36px;
     margin-top: 7px;
   }
-  .card-time__list, .card-time__list-button {
+  .card-list__time-item, .card-list__time-button {
     padding: 4px 13px;
     font-size: 14px;
     background: #D9E8FF;
+  }
+  .card-info {
+    padding: 0 12px;
+    padding-bottom: 20px;
   }
   .card-info__price {
     margin-right: auto;
